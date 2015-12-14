@@ -6,14 +6,14 @@ Nix, NixOS and Nixops related experiences
 
 Two extra steps seemed to be necessary on my Mac
 
-1. Create `/nix`directory
+.1. Create `/nix`directory
 
 ```
     sudo mkdir /nix
     sudo chown $USER /nix
 ```
 
-2. Add the following line to `$HOME/.bash_profile
+.2. Add the following line to `$HOME/.bash_profile
 
 ```
     if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi

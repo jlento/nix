@@ -32,8 +32,8 @@ In OSX, the packaged version 1.3 fails with virtualbox provider (https://github.
 ```
 git clone git://github.com/NixOS/nixops.git
 cd nixops
-nix-build release.nix -A build.x86_64-linux
-nix-shell release.nix -A build.x86_64-linux --exclude tarball
+nix-build release.nix -A build.x86_64-darvin
+nix-shell release.nix -A build.x86_64-darvin --exclude tarball
 ```
 
 Now having trouble with Host-Only networking. Hope it's only me.

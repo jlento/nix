@@ -27,11 +27,12 @@ Then the following line installed nix
 
 ## Installing nixops
 
-In OSX,
+In OSX, the packaged version 1.3 fails with virtualbox provider (https://github.com/NixOS/nixops/issues/340). Installing a development version according to https://nixos.org/nixops/manual/#chap-hacking
 
 ```
-    nix-channel --add http://nixos.org/channels/nixpkgs-unstable
-    nix-channel --update
-    nix-env -i nixops
+git clone git://github.com/NixOS/nixops.git
+cd nixops
+nix-build release.nix -A build.x86_64-linux
+nix-shell release.nix -A build.x86_64-linux --exclude tarball
 ```
 

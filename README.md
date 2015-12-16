@@ -38,3 +38,9 @@ nix-shell release.nix -A build.x86_64-linux --exclude tarball
 
 Now having trouble with Host-Only networking. Hope it's only me.
 
+Well, restarting `vboxnet0`helped. Phew.
+
+```
+sudo ifconfig vboxnet0 down
+sudo ifconfig vboxnet0 up
+```

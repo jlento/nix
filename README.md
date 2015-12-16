@@ -36,3 +36,5 @@ nix-build release.nix -A build.x86_64-linux
 nix-shell release.nix -A build.x86_64-linux --exclude tarball
 ```
 
+Now having trouble with Host-Only networking. Hope it's only me.
+

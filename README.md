@@ -61,6 +61,7 @@ Configuration file `desktop.nix`:
 
     };
 }
+```
 
 Creating the image and deploying it:
 
@@ -68,6 +69,4 @@ Creating the image and deploying it:
 nixops create -d desktop desktop.nix
 nixops deploy -d desktop
 nixops reboot -d desktop
-```
-
 ```

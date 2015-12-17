@@ -44,3 +44,30 @@ Well, restarting `vboxnet0`helped. Phew.
 sudo ifconfig vboxnet0 down
 sudo ifconfig vboxnet0 up
 ```
+
+
+## NixOS desktop VM
+
+Configuration file `desktop.nix`:
+
+```
+{
+  desktop =
+    { deployment.targetEnv = "virtualbox";
+
+     services.xserver.enable = true; 
+     services.xserver.displayManager.kdm.enable = true;
+     services.xserver.desktopManager.kde4.enable = true;
+
+    };
+}
+
+Creating the image and deploying it:
+
+```
+nixops create -d desktop desktop.nix
+nixops deploy -d desktop
+nixops reboot -d desktop
+```
+
+```
